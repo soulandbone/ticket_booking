@@ -1,7 +1,9 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import '../utils/app_info_list.dart';
 import '../utils/app_styles.dart';
+import '../widgets/hotels_widget.dart';
 import '../widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -84,7 +86,49 @@ class HomeScreen extends StatelessWidget {
               ),
             ]),
           ),
-          TicketView(),
+          const Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: const [
+                TicketView(),
+                TicketView(),
+              ],
+            ),
+          ),
+          const Gap(15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Hotels', style: Styles.headlineStyle2),
+                InkWell(
+                    onTap: () {
+                      print('You are tapped');
+                    },
+                    child: Text(
+                      'View All',
+                      style: Styles.textStyle.copyWith(
+                        color: Styles.textColor,
+                      ),
+                    ))
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            padding: const EdgeInsets.only(left: 20),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+                children: AppInfoList.hotelList
+                    .map((e) => HotelsWidget(
+                        image: e['image']!,
+                        place: e['place']!,
+                        destination: e['destination']!,
+                        price: e['price']!))
+                    .toList()),
+          )
         ],
       ),
     );
