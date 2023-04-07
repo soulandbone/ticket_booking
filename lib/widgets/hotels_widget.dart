@@ -5,10 +5,11 @@ import 'package:ticket_booking/utils/app_styles.dart';
 import '../utils/app_layout.dart';
 
 class HotelsWidget extends StatelessWidget {
-  String image;
-  String place;
-  String destination;
-  String price;
+  final String
+      image; //change it to Map , so the mapping gives just each map and then its deconstructed.
+  final String place;
+  final String destination;
+  final String price;
 
   HotelsWidget(
       {required this.place,
