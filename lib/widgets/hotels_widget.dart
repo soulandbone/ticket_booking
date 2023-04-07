@@ -5,17 +5,9 @@ import 'package:ticket_booking/utils/app_styles.dart';
 import '../utils/app_layout.dart';
 
 class HotelsWidget extends StatelessWidget {
-  final String
-      image; //change it to Map , so the mapping gives just each map and then its deconstructed.
-  final String place;
-  final String destination;
-  final String price;
+  final Map<String, String> map;
 
-  HotelsWidget(
-      {required this.place,
-      required this.image,
-      required this.destination,
-      required this.price});
+  HotelsWidget(this.map);
 
   @override
   Widget build(BuildContext context) {
@@ -46,22 +38,22 @@ class HotelsWidget extends StatelessWidget {
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'assets/images/$image',
+                      'assets/images/${map['image']}',
                     ))),
           ),
           const Gap(10),
           Text(
-            place,
+            map['place']!,
             style: Styles.headlineStyle2.copyWith(color: Styles.kakiColor),
           ),
           const Gap(5),
           Text(
-            destination,
+            map['destination']!,
             style: Styles.headlineStyle3.copyWith(color: Colors.white),
           ),
           const Gap(8),
           Text(
-            '\$$price/night',
+            '\$${map['price']}/night',
             style: Styles.headlineStyle1.copyWith(color: Styles.kakiColor),
           ),
         ],

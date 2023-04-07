@@ -121,13 +121,8 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             scrollDirection: Axis.horizontal,
             child: Row(
-                children: AppInfoList.hotelList
-                    .map((e) => HotelsWidget(
-                        image: e['image']!,
-                        place: e['place']!,
-                        destination: e['destination']!,
-                        price: e['price']!))
-                    .toList()),
+                children:
+                    AppInfoList.hotelList.map((e) => HotelsWidget(e)).toList()),
           )
         ],
       ),
