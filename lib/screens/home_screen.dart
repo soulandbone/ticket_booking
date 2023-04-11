@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_booking/widgets/row_double_text.dart';
 import '../utils/app_info_list.dart';
 import '../utils/app_styles.dart';
 import '../widgets/hotels_widget.dart';
@@ -66,24 +67,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const Gap(40),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Upcoming Flights',
-                    style: Styles.headlineStyle2,
-                  ),
-                  InkWell(
-                    onTap: () => print('lol'),
-                    child: Text(
-                      'View all',
-                      style: Styles.textStyle.copyWith(
-                        color: Styles.primaryColor,
-                      ),
-                    ),
-                  )
-                ],
-              ),
+              const RowDoubleText(
+                  bigText: 'Upcoming Flights', smallText: 'View all')
             ]),
           ),
           const Gap(15),
@@ -92,7 +77,9 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: AppInfoList.ticketList
-                  .map((ticket) => TicketView(ticket))
+                  .map((ticket) => TicketView(
+                        ticket: ticket,
+                      ))
                   .toList(),
             ),
           ),
