@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_booking/utils/app_layout.dart';
 import 'package:ticket_booking/utils/app_styles.dart';
+import 'package:ticket_booking/widgets/ticket_tabs.dart';
 
 import '../widgets/icon_text.dart';
 import '../widgets/row_double_text.dart';
@@ -23,35 +24,7 @@ class SearchScreen extends StatelessWidget {
                 style: Styles.headlineStyle1.copyWith(fontSize: 35),
               ),
               const Gap(20),
-              Container(
-                padding: const EdgeInsets.all(3.5),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: const Color(0xFFF4F6FD)),
-                child: Row(children: [
-                  Container(
-                    width: size.width * 0.44,
-                    padding: const EdgeInsets.symmetric(vertical: 7),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(50),
-                          bottomLeft: Radius.circular(50)),
-                      color: Colors.white,
-                    ),
-                    child: const Center(child: Text('Airline Tickets')),
-                  ),
-                  Container(
-                    width: size.width * 0.44,
-                    padding: const EdgeInsets.symmetric(vertical: 7),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(50),
-                          bottomRight: Radius.circular(50)),
-                    ),
-                    child: const Center(child: Text('Hotels ')),
-                  ),
-                ]),
-              ),
+              const TicketTabs(firstTab: 'AirlineTickets', secondTab: 'Hotels'),
               const Gap(25),
               const IconText(
                   icon: Icons.flight_takeoff_rounded, text: 'Departure'),
@@ -88,7 +61,7 @@ class SearchScreen extends StatelessWidget {
                             spreadRadius: 1),
                       ],
                     ),
-                    height: 400,
+                    height: 415,
                     width: size.width * 0.42,
                     padding: const EdgeInsets.all(15),
                     child: Column(children: [
@@ -114,7 +87,7 @@ class SearchScreen extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 12, vertical: 12),
                             width: size.width * 0.44,
-                            height: 210,
+                            height: 200,
                             decoration: BoxDecoration(
                                 color: const Color(0xFF3AB8B8),
                                 borderRadius: BorderRadius.circular(15)),
@@ -154,7 +127,7 @@ class SearchScreen extends StatelessWidget {
                       const Gap(15),
                       Container(
                         width: size.width * 0.44,
-                        height: 210,
+                        height: 200,
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                             color: const Color(0xFFEC6545),
