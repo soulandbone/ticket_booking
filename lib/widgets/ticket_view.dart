@@ -129,8 +129,8 @@ class TicketView extends StatelessWidget {
           ),
           Container(
             color: isColor ? Styles.orangeColor : Colors.white,
-            child: Row(children: [
-              const SizedBox(
+            child: const Row(children: [
+              SizedBox(
                 height: 20,
                 width: 10,
                 child: DecoratedBox(
@@ -142,12 +142,12 @@ class TicketView extends StatelessWidget {
               ),
               Expanded(
                 child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    padding: EdgeInsets.symmetric(horizontal: 8),
                     child: CustomLayoutBuilder(
                       sections: 15,
                     )),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
                 width: 10,
                 child: DecoratedBox(

@@ -14,7 +14,7 @@ class Styles {
       TextStyle(fontSize: 26, color: textColor, fontWeight: FontWeight.bold);
   static TextStyle headlineStyle2 =
       TextStyle(fontSize: 21, color: textColor, fontWeight: FontWeight.bold);
-  static TextStyle headlineStyle3 = TextStyle(
+  static TextStyle headlineStyle3 = const TextStyle(
     fontSize: 17,
   );
   static TextStyle headlineStyle4 = TextStyle(

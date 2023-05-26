@@ -47,11 +47,11 @@ class TicketsScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 margin: const EdgeInsets.symmetric(horizontal: 7),
                 child: Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         TwoTextColumn(
                             firstText: 'Flutter DB', secondText: 'Passenger'),
                         TwoTextColumn(
@@ -63,16 +63,16 @@ class TicketsScreen extends StatelessWidget {
                     ),
                   ),
                   const Gap(2),
-                  CustomLayoutBuilder(
+                  const CustomLayoutBuilder(
                     sections: 15,
                     isColor: false,
                   ),
                   const Gap(2),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         TwoTextColumn(
                             firstText: '5221 364869',
                             secondText: 'Number of E-Ticket'),
@@ -85,7 +85,7 @@ class TicketsScreen extends StatelessWidget {
                     ),
                   ),
                   const Gap(2),
-                  CustomLayoutBuilder(
+                  const CustomLayoutBuilder(
                     sections: 15,
                     isColor: false,
                   ),
@@ -118,7 +118,7 @@ class TicketsScreen extends StatelessWidget {
                     ),
                   ),
                   const Gap(2),
-                  CustomLayoutBuilder(
+                  const CustomLayoutBuilder(
                     sections: 15,
                     isColor: false,
                   ),

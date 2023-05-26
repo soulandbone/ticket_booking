@@ -7,7 +7,7 @@ import '../utils/app_layout.dart';
 class HotelsWidget extends StatelessWidget {
   final Map<String, String> map;
 
-  HotelsWidget(this.map);
+  const HotelsWidget(this.map, {super.key});
 
   @override
   Widget build(BuildContext context) {

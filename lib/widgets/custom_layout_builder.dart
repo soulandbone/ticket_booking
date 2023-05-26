@@ -5,8 +5,8 @@ class CustomLayoutBuilder extends StatelessWidget {
   final double width;
   final bool isColor;
 
-  CustomLayoutBuilder(
-      {required this.sections, this.width = 3, this.isColor = true});
+  const CustomLayoutBuilder(
+      {super.key, required this.sections, this.width = 3, this.isColor = true});
 
   @override
   Widget build(BuildContext context) {

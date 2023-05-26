@@ -160,7 +160,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           const Gap(15),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(children: [
               Text(
                 '121456',
@@ -184,9 +184,9 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               const Gap(20),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   TwoTextColumn(firstText: '29 021', secondText: 'Miles'),
                   TwoTextColumn(
                     firstText: 'Delta Airlines',
@@ -196,9 +196,9 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               const Gap(20),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   TwoTextColumn(firstText: '89', secondText: 'Miles'),
                   TwoTextColumn(
                     firstText: 'Burger King',
@@ -208,9 +208,9 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               const Gap(20),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   TwoTextColumn(firstText: '52340', secondText: 'Miles'),
                   TwoTextColumn(
                     firstText: 'Exuma',
